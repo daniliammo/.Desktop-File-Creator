@@ -17,8 +17,7 @@ os.remove('config.json')
 
 class dotDesktopUI(GridLayout):
     from ConfigWrite import WriteConfig
-    def Dot(self):
-        DotDesktop.Generate()
+    from GenerateDotDesktop import DotDesktop
 
 
 class DotDesktopCreateApp(App):
