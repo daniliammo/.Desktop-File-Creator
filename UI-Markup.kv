@@ -197,6 +197,8 @@
 		padding: 10
 
 		Button:
+			font_size: 48
+			font_name: 'fonts/Ubuntu-R.ttf'
 			text: "Создать"
 			background_color: (0, 1, 0, 1)
 			on_press: root.WriteConfig.WriteCFG(AppName.text, AppType.text, AppVersion.text, AppComment.text, AppCategory.text, AppIcon.text, AppExec.text, AppTerminal.active), root.DotDesktop.Generate()
