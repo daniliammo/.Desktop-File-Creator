@@ -1,7 +1,6 @@
 <dotDesktopUI>:
 
 	id: dotdesktopid
-	display: entry
 	rows: 10
 	padding: 0
 	spacing: 0
@@ -9,23 +8,27 @@
 
 	BoxLayout:
 
-		spacing: 0
-		padding: 0
+		spacing: 10
+		padding: 10
 
 		Label:
-			text: 'Мастер создания .Desktop'
-			font_size: 72
+			text: "Создать .desktop"
+			font_size: 48
 			font_name: 'fonts/Ubuntu-R.ttf'
-			cursor_color: [0, 0, 0]
-			selection_color: [255, 255, 255, .2]
+
 
 	BoxLayout:
 
-		spacing: 0
-		padding: 0
+		spacing: 10
+		padding: 10
+
+		Label:
+			text: "Имя Приложения:"
+			font_size: 32
+			font_name: 'fonts/Ubuntu-R.ttf'
 
 		TextInput:
-			id: entry
+			id: AppName
 			background_color: [0.205, 0.205, 0.205] # Черный
 			foreground_color: [255, 255, 255] # Белый
 			multiline: False
@@ -42,14 +45,13 @@
 		padding: 10
 
 		Label:
-			text: "text"
+			text: "Тип Приложения: (Game, Application)"
 			font_size: 32
-			font_name: 'fonts/Ubuntu-Th.ttf'
-			halign: 'right'
-			valign: 'middle'
+			font_name: 'fonts/Ubuntu-R.ttf'
+
 
 		TextInput:
-			id: entry1
+			id: AppType
 			background_color: [0.205, 0.205, 0.205] # Черный
 			foreground_color: [255, 255, 255] # Белый
 			multiline: False
@@ -60,15 +62,141 @@
 			selection_color: [255, 255, 255, .2]
 			halign: 'left'
 
+
 	BoxLayout:
 
-		spacing: 0
-		padding: 0
+		spacing: 10
+		padding: 10
+
+		Label:
+			text: "Версия Приложения (Можно писать все что угодно):"
+			font_size: 32
+			font_name: 'fonts/Ubuntu-R.ttf'
+
+		TextInput:
+			id: AppVersion
+			background_color: [0.205, 0.205, 0.205] # Черный
+			foreground_color: [255, 255, 255] # Белый
+			multiline: False
+			font_size: 48
+			font_name: 'fonts/Ubuntu-R.ttf'
+			color: '#1C1C1C'
+			cursor_color: [255, 255, 255, .2]
+			selection_color: [255, 255, 255, .2]
+			halign: 'left'
+
+
+	BoxLayout:
+
+		spacing: 10
+		padding: 10
+
+		Label:
+			text: "Комментарий к Приложению:"
+			font_size: 32
+			font_name: 'fonts/Ubuntu-R.ttf'
+
+		TextInput:
+			id: AppComment
+			background_color: [0.205, 0.205, 0.205] # Черный
+			foreground_color: [255, 255, 255] # Белый
+			multiline: False
+			font_size: 48
+			font_name: 'fonts/Ubuntu-R.ttf'
+			color: '#1C1C1C'
+			cursor_color: [255, 255, 255, .2]
+			selection_color: [255, 255, 255, .2]
+			halign: 'left'
+
+
+	BoxLayout:
+
+		spacing: 10
+		padding: 10
+
+		Label:
+			text: "Категория Приложения (Наример: Games или Applications):"
+			font_size: 32
+			font_name: 'fonts/Ubuntu-R.ttf'
+
+		TextInput:
+			id: AppCategory
+			background_color: [0.205, 0.205, 0.205] # Черный
+			foreground_color: [255, 255, 255] # Белый
+			multiline: False
+			font_size: 48
+			font_name: 'fonts/Ubuntu-R.ttf'
+			color: '#1C1C1C'
+			cursor_color: [255, 255, 255, .2]
+			selection_color: [255, 255, 255, .2]
+			halign: 'left'
+
+
+	BoxLayout:
+
+		spacing: 10
+		padding: 10
+
+		Label:
+			text: "Полный Путь к иконке Приложения:"
+			font_size: 32
+			font_name: 'fonts/Ubuntu-R.ttf'
+
+		TextInput:
+			id: AppIcon
+			background_color: [0.205, 0.205, 0.205] # Черный
+			foreground_color: [255, 255, 255] # Белый
+			multiline: False
+			font_size: 48
+			font_name: 'fonts/Ubuntu-R.ttf'
+			color: '#1C1C1C'
+			cursor_color: [255, 255, 255, .2]
+			selection_color: [255, 255, 255, .2]
+			halign: 'left'
+
+
+	BoxLayout:
+
+		spacing: 10
+		padding: 10
+
+		Label:
+			text: "Полный Путь к исполняемому файлу Приложения:"
+			font_size: 32
+			font_name: 'fonts/Ubuntu-R.ttf'
+
+		TextInput:
+			id: AppExec
+			background_color: [0.205, 0.205, 0.205] # Черный
+			foreground_color: [255, 255, 255] # Белый
+			multiline: False
+			font_size: 48
+			font_name: 'fonts/Ubuntu-R.ttf'
+			color: '#1C1C1C'
+			cursor_color: [255, 255, 255, .2]
+			selection_color: [255, 255, 255, .2]
+			halign: 'left'
+
+
+	BoxLayout:
+
+		spacing: 10
+		padding: 10
+
+		Label:
+			text: "Запустить в терминале" if AppTerminal.active else 'Не запускать в терминале'
+			font_size: 32
+			font_name: 'fonts/Ubuntu-R.ttf'
+
+        Switch:
+            id: AppTerminal
+
+	BoxLayout:
+
+		spacing: 10
+		padding: 10
 
 		Button:
 			text: "Создать"
 			background_color: (0, 1, 0, 1)
-			on_press: root.WriteConfig.WriteCFG()
-
-			size_hint: .3, .3
-			pos: 500, 500
+			on_press: root.WriteConfig.WriteCFG(AppName.text, AppType.text, AppVersion.text, AppComment.text, AppCategory.text, AppIcon.text, AppExec.text, AppTerminal.active), root.DotDesktop.Generate()
