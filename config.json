@@ -1,0 +1,14 @@
+{
+    "CFG": [
+        {
+            "Name": "Minecraft",
+            "Type": "Application",
+            "Version": "v1.16.5",
+            "Comment": "Comment",
+            "Categories": "Games",
+            "Icon": "mine.png",
+            "Exec": "minecraft.x86",
+            "Terminal": "False"
+        }
+    ]
+}
