@@ -8,3 +8,4 @@ Create .desktop file for GNU / LINUX
 [+] Тип приложения
 [+] Категория приложения
 
+![](ScreenShotsForREADME/APP.png)
