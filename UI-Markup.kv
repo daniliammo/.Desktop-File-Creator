@@ -12,17 +12,12 @@
 		spacing: 0
 		padding: 0
 
-		TextInput:
+		Label:
 			text: 'Мастер создания .Desktop'
-			readonly: True
-			background_color: [0, 0, 0] # Черный
-			foreground_color: [255, 255, 255] # Белый
-			multiline: False
 			font_size: 72
 			font_name: 'fonts/Ubuntu-R.ttf'
 			cursor_color: [0, 0, 0]
 			selection_color: [255, 255, 255, .2]
-			halign: 'center'
 
 	BoxLayout:
 
@@ -75,7 +70,5 @@
 			background_color: (0, 1, 0, 1)
 			on_press: root.WriteConfig.WriteCFG()
 
-			size: (32, 16)
-			size_hint: (.35, .35)
-			pos: (300, 250)
-
+			size_hint: .3, .3
+			pos: 500, 500
