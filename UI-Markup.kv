@@ -201,4 +201,4 @@
 			font_size: 48
 			font_name: 'fonts/Ubuntu-R.ttf'
 			background_color: (0, 1, 0, 1)
-			on_press: root.WriteConfig.WriteCFG(AppName.text, AppType.text, AppVersion.text, AppComment.text, AppCategory.text, AppIcon.text, AppExec.text, AppTerminal.active), root.DotDesktop.Generate()
+			on_press: root.DotDesktop.Generate(AppName.text, AppType.text, AppVersion.text, AppComment.text, AppCategory.text, AppIcon.text, AppExec.text, AppTerminal.active)
