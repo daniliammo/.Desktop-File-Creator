@@ -1,17 +1,15 @@
-from GenerateDotDesktop import DotDesktop
 from kivy.lang.builder import Builder
 from kivy.app import App
 from kivy.uix.gridlayout import GridLayout
 from kivy.config import Config
 from kivy.core.window import Window
-import os
 Config.set('graphics', 'width', '950')
 Config.set('graphics', 'height', '950')
 Window.clearcolor = (0.205, 0.205, 0.205) #343434
 
 
 class dotDesktopUI(GridLayout):
-    from GenerateDotDesktop import DotDesktop
+    pass
 
 
 class DotDesktopCreateApp(App):
